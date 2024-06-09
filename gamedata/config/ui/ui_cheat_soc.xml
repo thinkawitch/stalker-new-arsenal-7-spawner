@@ -13,18 +13,21 @@
 			<text font="graffiti22" r="255" g="210" b="63">Спавн-меню</text>
 		</cap_cheat>
 		
-		<frame x="55" y="102" width="470" height="353">
+		<!-- внешняя панель под поиск и список -->
+		<frame x="55" y="128" width="470" height="327">
 			<texture>ui_tablist_textbox</texture>		
 		</frame>
-		
-		<list_frame x="60" y="142" width="459" height="287">
+		<!-- внутренняя обводка под поиск и список -->
+		<list_frame x="60" y="168" width="459" height="261">
 			<texture>ui_tablist_textbox</texture>
 		</list_frame>
-		<list_window x="68" y="151" width="441" height="269" item_height="19">
+		<!-- список вещей и тп -->
+		<list_window x="68" y="177" width="441" height="243" item_height="19">
 			<font font="letterica16" r="216" g="186" b="140" />
 		</list_window>
 		
-		<tab x="55" y="48" width="464" height="52">
+		<tab x="55" y="48" width="464" height="78">
+			<!-- кнопки вторая строка -->
 			<button x="0" y="28" width="116" height="26" stretch="1">
 				<!--<texture_offset x="0" y="-7"/>-->
 				<texture>ui_inGame2_Mp_bigbuttone_noupcorner</texture>
@@ -57,6 +60,7 @@
 					<e r="106" g="95" b="91"/> <t r="227" g="199" b="178"/> <h r="180" g="153" b="155"/>
 				</text_color>
 			</button>
+			<!-- кнопки первая строка -->
 			<button x="0" y="0" width="116" height="26" stretch="1">
 				<!--<texture_offset x="0" y="-7"/>-->
 				<texture>ui_inGame2_Mp_bigbuttone_noupcorner</texture>
@@ -89,6 +93,14 @@
 					<e r="106" g="95" b="91"/> <t r="227" g="199" b="178"/> <h r="180" g="153" b="155"/>
 				</text_color>
 			</button>
+			<!-- кнопки третья строка -->
+			<button x="0" y="54" width="116" height="26" stretch="1">
+				<texture>ui_inGame2_Mp_bigbuttone_noupcorner</texture>
+				<text font="graffiti19" align="c">Локации</text>				
+				<text_color>
+					<e r="106" g="95" b="91"/> <t r="227" g="199" b="178"/> <h r="180" g="153" b="155"/>
+				</text_color>
+			</button>
 		</tab>
 		<btn_spawn x="219" y="460" width="157" height="48">
 			<text font="graffiti19" align="c">Получить</text>
@@ -115,11 +127,11 @@
 			<text font="letterica16" a="130" r="130" g="130" b="130" align="r"/>
 		</sect_wnd>
 	
-		<button_search x="60" y="112" width="37" height="25">
+		<button_search x="60" y="138" width="37" height="25">
 			<texture>ui_hud_button_voting_01</texture>
 			<text>Найти</text>
 		</button_search>
-		<edit_box x="98" y="113" width="416" height="24">
+		<edit_box x="98" y="139" width="416" height="24">
 			<texture>ui_linetext_e</texture>
 			<text font="letterica18" a="255" r="200" g="255" b="200"/>
 		</edit_box>

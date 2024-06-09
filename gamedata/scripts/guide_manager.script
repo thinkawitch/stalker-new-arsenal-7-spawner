@@ -363,6 +363,10 @@ function road_to_esc_elevator(actor, npc)
 	start_jumpto(3.825,9.243,96.881,278115,85, 0,1.5,0,"L01_escape")
 end
 
+function road_to_esc_kpp_new(actor, npc)
+	start_jumpto(-169.8882,-25.4353,-353.0877, 79712, 31, 1,0,-0.183, "L01_escape")
+end
+
 function road_to_garbage_angar(actor, npc)
 	start_jumpto(-73.497,0.679,37.154,129068,326, 0, 3, 0, "l02_garbage")
 end
@@ -415,6 +419,10 @@ function road_to_agroprom_underground(actor, npc)
 	start_jumpto(-38.984909,-3.895501,38.022346,4722,724, 0,3,0,"l03u_agr_underground")
 end
 
+function road_to_agroprom_base(actor, npc)
+	start_jumpto(-152.6411,-0.0015,-198.3029, 85075, 551, -0.3,0,1, "l03_agroprom")
+end
+
 function road_to_pripyat_hotel(actor, npc)
 	start_jumpto(111.059,3.997,121.136,222185,2182, 0,1,0,"l11_pripyat")
 end
@@ -425,6 +433,19 @@ end
 
 function road_to_aes1_camp(actor, npc)
 	start_jumpto(369.756,0.148,-245.252,158548,2347, 0,0,0,"l12_stancia")
+end
+
+function road_to_aes2_enter(actor, npc)
+	-- pos 369.779 0.1498 -244.4590
+	-- lvid 158549
+	-- gvid 2347
+	-- dir -0.017 0.00 0.99
+	-- start_jumpto(369.756,0.148,-245.252,158548,2347, 0,0,0,"l12_stancia")
+	start_jumpto(851.548,-0.099,80.515, 218381, 2634, -0.006,0,0.999, "l12_stancia_2")
+end
+
+function road_to_aes2_traider(actor, npc)
+	start_jumpto(517.5938,18.2038,275.6838, 161784, 2617, 0.9699,0,0.2431, "l12_stancia_2")
 end
 
 function road_to_radar_tunnel(actor, npc)
@@ -441,6 +462,10 @@ end
 
 function road_to_pred_bar(actor, npc)
 	start_jumpto(48.511,3.928,89.941,1019031,4005, 0,-1,0,"predbannik")
+end
+
+function road_to_pred_mil_trader(actor, npc)
+	start_jumpto(-439.8151,-5.7410,-147.9705, 269518, 3906, 1,0,-0.5, "predbannik")
 end
 
 function road_to_marsh_baza(actor, npc)
@@ -486,8 +511,44 @@ function road_to_jupiter(actor, npc)
 	start_jumpto(331.94, 20.54, -330.93,1246437,3745, 0,0,0,"jupiter")
 end
 
+function road_to_jupiter_scient(actor, npc)
+	start_jumpto(-192.4604,-4.4475,61.0274, 390688, 3716, -1,0,0.5, "jupiter")
+end
+
+function road_to_jupiter_janov(actor, npc)
+	start_jumpto(-57.0894,3.4853,202.2094, 623864, 3717, 1,0,-0.5, "jupiter")
+end
+
+function road_to_zaton(actor, npc)
+	start_jumpto(431.4067,31.3390,-412.7567, 1672955, 3694, 0,0,1, "zaton")
+end
+
+function road_to_zaton_skadovsk(actor, npc)
+	start_jumpto(116.9431,-3.9360,177.5393, 167208, 3686, 0,0,1, "zaton")
+end
+
 function road_to_hiding_road(actor, npc)
 	start_jumpto(84.11,4.85,-265.25,603240,4508, 0,2,0,"hiding_road")
+end
+
+function road_to_dead_city_1(actor, npc)
+	start_jumpto(117.0543,8.9830,-86.9285, 374006, 5236, 0.7,0,0.7, "deadcity")
+end
+
+function road_to_dead_city_2(actor, npc)
+	start_jumpto(-17.7374,2.0169,-89.1126, 284015, 5188, 0,0,1, "deadcity")
+end
+
+function road_to_limansk_west(actor, npc)
+	start_jumpto(-58.6521,-5.0446,-202.7060, 1816, 2990, 1,0,0, "limansk")
+end
+
+function road_to_promzone(actor, npc)
+	start_jumpto(32.8520,11.2469,-585.7290, 260955, 4889, 0,0,1, "promzone")
+end
+
+function road_to_generators(actor, npc)
+	start_jumpto(-62.1650,32.9639,-534.0401, 263124, 3100, 0,0,1, "generators")
 end
 
 function road_to_kolhoz(actor, npc)

@@ -236,10 +236,13 @@ function main_menu:OnKeyboard(dik, keyboard_action)  --virtual function
 --            db.actor:give_money(15000)
 --			weap_my.main()
 --		end
+--
 
-		if dik == DIK_keys.DIK_F1 then
+		-- if dik == DIK_keys.DIK_F1 then -- открыть чит по F1
+		if dik == DIK_keys.DIK_INSERT then -- открыть чит по INSERT
 		    ui_cheat_main.start_menu(self)
 		end
+		
 
 		if dik == DIK_keys.DIK_Q then
 		    local console = get_console()
