@@ -1,0 +1,5 @@
+
+# game dir, allow only changed gamedata files
+/*
+!.gitignore
+!gamedata/

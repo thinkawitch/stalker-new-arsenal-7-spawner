@@ -1,0 +1,1356 @@
+----------------------------------------------------------------------------------------------
+-- Guide Manager
+----------------------------------------------------------------------------------------------
+
+cheatautodrive			= true
+local start_teleport		= false
+
+function precond_has_500()
+	return db.actor:money() >= 500
+end
+
+function precond_has_1000()
+	return db.actor:money() >= 1000
+end
+
+function precond_has_1500()
+	return db.actor:money() >= 1500
+end
+
+function precond_has_2000()
+	return db.actor:money() >= 2000
+end
+
+function precond_has_2500()
+	return db.actor:money() >= 2500
+end
+
+function precond_has_3000()
+	return db.actor:money() >= 3000
+end
+
+function precond_has_3500()
+	return db.actor:money() >= 3500
+end
+
+function precond_has_4000()
+	return db.actor:money() >= 4000
+end
+
+function precond_has_4500()
+	return db.actor:money() >= 4500
+end
+
+function precond_has_5000()
+	return db.actor:money() >= 5000
+end
+
+
+function relocate_500(actor, npc)
+	dialogs.relocate_money(npc, 500, "out")
+end
+
+function relocate_1000(actor, npc)
+	dialogs.relocate_money(npc, 1000, "out")
+end
+
+function relocate_1500(actor, npc)
+	dialogs.relocate_money(npc, 1500, "out")
+end
+
+function relocate_2000(actor, npc)
+	dialogs.relocate_money(npc, 2000, "out")
+end
+
+function relocate_2500(actor, npc)
+	dialogs.relocate_money(npc, 2500, "out")
+end
+
+function relocate_3000(actor, npc)
+	dialogs.relocate_money(npc, 3000, "out")
+end
+
+function relocate_3500(actor, npc)
+	dialogs.relocate_money(npc, 3500, "out")
+end
+
+function relocate_4000(actor, npc)
+	dialogs.relocate_money(npc, 4000, "out")
+end
+
+function relocate_4500(actor, npc)
+	dialogs.relocate_money(npc, 4500, "out")
+end
+
+function relocate_5000(actor, npc)
+	dialogs.relocate_money(npc, 5000, "out")
+end
+
+
+function went_to_esc_sidor(actor, npc)
+	local a = vector()
+	a.x = -240.367
+	a.y = -19.588
+	a.z = -128.111
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+	level.change_game_time(math.random(1, 5), 0, 0)
+end
+
+function went_to_esc_kpp(actor, npc)
+	local a = vector()
+	a.x = 26.938
+	a.y = 16.554
+	a.z = 678.968
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+	level.change_game_time(math.random(1, 10), 0, 0)
+end
+
+function went_to_esc_elevator(actor, npc)
+	local a = vector()
+	a.x = 3.825
+	a.y = 9.243
+	a.z = 96.881
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+	level.change_game_time(math.random(1, 5), 0, 0)
+end
+
+function went_to_garbage_angar(actor, npc)
+	local a = vector()
+	a.x = -73.497
+	a.y = 0.679
+	a.z = 37.154
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+	level.change_game_time(math.random(1, 5), 0, 0)
+end
+
+function went_to_garbage_car(actor, npc)
+	local a = vector()
+	a.x = -43.236
+	a.y = 0.538
+	a.z = -204.642
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+	level.change_game_time(math.random(1, 5), 0, 0)
+end
+
+function went_to_military_tower(actor, npc)
+	local a = vector()
+	a.x = -243.505
+	a.y = -6.402
+	a.z = 292.911
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+	level.change_game_time(math.random(1, 5), 0, 0)
+end
+
+function went_to_military_freedom_base(actor, npc)
+	local a = vector()
+	a.x = -7.2246780395508
+	a.y = -6.1810946464539
+	a.z = 90.879776000977
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+	level.change_game_time(math.random(1, 5), 0, 0)
+end
+
+function went_to_military_barrier(actor, npc)
+	local a = vector()
+	a.x = 21.078105926514
+	a.y = -23.850275039673
+	a.z = 292.57852172852
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+	level.change_game_time(math.random(1, 5), 0, 0)
+end
+
+function went_to_agroprom_north(actor, npc)
+	local a = vector()
+	a.x = 126.437
+	a.y = 14.142
+	a.z = 67.758
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+	level.change_game_time(math.random(1, 10), 0, 0)
+end
+
+function went_to_pripyat_hotel(actor, npc)
+	local a = vector()
+	a.x = 111.059
+	a.y = 3.997
+	a.z = 121.136
+	if actor_in_pripyat(actor, npc) then
+		level.add_pp_effector ("teleport.ppe", 2006, false)
+		db.actor:set_actor_position(a)
+		level.change_game_time(math.random(1, 5), 0, 0)
+	else
+		road_to_pripyat_traders(actor, npc)
+	end
+end
+
+function went_to_pred_sidor(actor, npc)
+	local a = vector()
+	a.x = -23.367
+	a.y = 1.588
+	a.z = 347.111
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+	level.change_game_time(math.random(1, 15), 0, 0)
+end
+
+function went_to_pred_bar(actor, npc)
+	local a = vector()
+	a.x = 48.511
+	a.y = 3.928
+	a.z = 89.941
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+	level.change_game_time(math.random(1, 15), 0, 0)
+end
+
+function went_to_marsh_from_baza(actor, npc)
+	local a = vector()
+	a.x = -36.367
+	a.y = 1.0
+	a.z = -255.111
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+
+	level.change_game_time(math.random(1, 3), 0, 0)
+end
+
+function went_to_baza_from_marsh(actor, npc)
+	local a = vector()
+	a.x = -205.367
+	a.y = 0.888
+	a.z = -291.111
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+
+	level.change_game_time(math.random(1, 10), 0, 0)
+end
+
+function went_to_peshera_quest(actor, npc)
+	local a = vector()
+	a.x = -95.21
+	a.y = 10.60
+	a.z = -123.21
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+	level.change_game_time(math.random(1, 15), 0, 0)
+end
+
+function went_to_peshera_exit(actor, npc)
+	local a = vector()
+	a.x = -179.98
+	a.y = -10.59
+	a.z = -2.63
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+	level.change_game_time(math.random(1, 15), 0, 0)
+end
+
+function went_to_red_forest(actor, npc)
+	local a = vector()
+	a.x = 28.85
+	a.y = 0.0
+	a.z = 25.17
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+	level.change_game_time(math.random(1, 3), 0, 0)
+end
+
+function went_to_lost_village(actor, npc)
+	local a = vector()
+	a.x = 3.57
+	a.y = 18.15
+	a.z = 71.24
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+	level.change_game_time(math.random(1, 3), 0, 0)
+end
+
+function went_to_jupiter_exit(actor, npc)
+	local a = vector()
+	a.x = 322.65
+	a.y = 31.46
+	a.z = -312.05
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+	level.change_game_time(math.random(1, 15), 0, 0)
+end
+
+function went_to_jupiter_bunker(actor, npc)
+	local a = vector()
+	a.x = -188.76
+	a.y = -4.98
+	a.z = 73.36
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+	level.change_game_time(math.random(1, 5), 0, 0)
+end
+
+function went_to_jupiter_janov(actor, npc)
+	local a = vector()
+	a.x = -56.63
+	a.y = 3.48
+	a.z = 202.24
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+	level.change_game_time(math.random(1, 5), 0, 0)
+end
+
+function went_to_jupiter_zaton(actor, npc)
+	local a = vector()
+	a.x = 432.78
+	a.y = 2.76
+	a.z = 397.38
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+	level.change_game_time(math.random(1, 10), 0, 0)
+end
+
+function went_to_jupiter_warehouse(actor, npc)
+	local a = vector()
+	a.x = -451.76
+	a.y = 0.04
+	a.z = -346.59
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+	level.change_game_time(math.random(1, 10), 0, 0)
+end
+
+function went_to_jupiter_bashnya(actor, npc)
+	local a = vector()
+	a.x = -10.94
+	a.y = 7.43
+	a.z = 246.75
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+	level.change_game_time(math.random(1, 5), 0, 0)
+end
+
+function went_to_yantar_from_bunker(actor, npc)
+	local a = vector()
+	a.x = 57.046209716797
+	a.y = -11.858985824585
+	a.z = -265.95639404297
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+end
+
+function went_to_test_location(actor, npc)
+	local a = vector()
+	a.x = 0
+	a.y = 0
+	a.z = 0
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+end
+
+function road_to_esc_sidor(actor, npc)
+	start_jumpto(-240.367,-19.588,-128.111,15578,8, 0,1.5,0,"L01_Escape")
+end
+
+function road_to_esc_kpp(actor, npc)
+	start_jumpto(26.983,16.554,678.968,306463,208, 0,1.5,0,"L01_escape")
+end
+
+function road_to_esc_elevator(actor, npc)
+	start_jumpto(3.825,9.243,96.881,278115,85, 0,1.5,0,"L01_escape")
+end
+
+function road_to_garbage_angar(actor, npc)
+	start_jumpto(-73.497,0.679,37.154,129068,326, 0, 3, 0, "l02_garbage")
+end
+
+function road_to_garbage_car(actor, npc)
+	start_jumpto(-43.236,0.538,-204.642,144362,267, 0, 2, 0, "l02_garbage")
+end
+
+function road_to_bar_bar(actor, npc)
+	start_jumpto(125.06059265137,-4.3442974090576,28.390350341797,35389,1235, 0, -2, 0, "l05_bar")
+end
+
+function road_to_yantar(actor, npc)
+	start_jumpto(57.046209716797,-11.858985824585,-265.95639404297,68616,1480, 0.0,1.5,0.0,"L08_yantar")
+end
+
+function road_to_military_tower(actor, npc)
+	start_jumpto(-243.505,-6.402,295.911,89965,1797, 0.5, 1.5, 0, "l07_military")
+end
+
+function road_to_military_freedom_base(actor, npc)
+	start_jumpto(-7.2246780395508,-6.1810946464539,90.879776000977,327587,1771, 0, 3, 0, "l07_military")
+end
+
+function road_to_military_barrier(actor, npc)
+	start_jumpto(21.078105926514,-23.850275039673,292.57852172852,381463,1805, 0, -1, 0, "l07_military")
+end
+
+function road_to_rostok_heli(actor, npc)
+	start_jumpto(-287.852,0.799,175.200,538,1341, 0,-1.5,0,"l06_rostok")
+end
+
+function road_to_darkvalley_zapravka(actor, npc)
+	start_jumpto(121.972,8.003,-62.180,309435,978, 0,1.5,0,"l04_darkvalley")
+end
+
+function road_to_darkvalley_farm(actor, npc)
+	start_jumpto(-114.220558,0.028183,-456.839081,43778,829, 0,3,0,"l04_darkvalley")
+end
+
+function road_to_LabX18_lift(actor, npc)
+	start_jumpto(-2.256,9.320,-4.432,2410,1109, 0,3,0,"l04u_LabX18")
+end
+
+function road_to_agroprom_north(actor, npc)
+	start_jumpto(126.437,14.142,67.758,359513,495, 0,2.5,0,"l03_agroprom")
+end
+
+function road_to_agroprom_underground(actor, npc)
+	start_jumpto(-38.984909,-3.895501,38.022346,4722,724, 0,3,0,"l03u_agr_underground")
+end
+
+function road_to_pripyat_hotel(actor, npc)
+	start_jumpto(111.059,3.997,121.136,222185,2182, 0,1,0,"l11_pripyat")
+end
+
+function road_to_pripyat_traders(actor, npc)
+	start_jumpto(201.60,-3.47,207.95,261127,2219, 0,1,0,"l11_pripyat")
+end
+
+function road_to_aes1_camp(actor, npc)
+	start_jumpto(369.756,0.148,-245.252,158548,2347, 0,0,0,"l12_stancia")
+end
+
+function road_to_radar_tunnel(actor, npc)
+	start_jumpto(660.181,-43.877,169.558,227064,1915, 0,0,0,"l10_radar")
+end
+
+function road_to_radar_secret(actor, npc)
+	start_jumpto(303.430,-39.451,-19.401,67298,1930, 0,0,0,"l10_radar")
+end
+
+function road_to_pred_sidor(actor, npc)
+	start_jumpto(-23.367,1.588,347.111,906658,3988, 0,3,0,"predbannik")
+end
+
+function road_to_pred_bar(actor, npc)
+	start_jumpto(48.511,3.928,89.941,1019031,4005, 0,-1,0,"predbannik")
+end
+
+function road_to_marsh_baza(actor, npc)
+	start_jumpto(-205.367,0.888,-291.111,38661,3376, 0,0,0,"marsh")
+end
+
+function road_to_pripyat2(actor, npc)
+	if not has_alife_info("pri_first_time_in_pripyat2") then
+		db.actor:give_info_portion("pri_first_time_in_pripyat2")
+	end
+	start_jumpto(134.0,28.92,238.0,364239,3769, 0,0,0,"pripyat")
+end
+
+function road_to_swamp_baza(actor, npc)
+	start_jumpto(193.20,2.70,-27.92,1568904,4394, 0,0,0,"swamp_old")
+end
+
+function road_to_red_forest(actor, npc)
+	start_jumpto(28.85,0.00,25.08,82754,3263, 0,0,0,"red_forest")
+end
+
+function road_to_lost_village(actor, npc)
+	start_jumpto(3.57,18.15,71.24,14682,3328, 0,0,0,"lost_village")
+end
+
+function road_to_hospital(actor, npc)
+	start_jumpto(-74.55,19.99,566.81,7194,3075, 0,0,0,"hospital")
+end
+
+function road_to_aver(actor, npc)
+	start_jumpto(-404.91,0.55,67.09,172524,2889, 0,0,0,"aver")
+end
+
+function road_to_av_peshera(actor, npc)
+	start_jumpto(-321.73,16.30,104.66,33078,2922, 0,1.5,0,"av_peshera")
+end
+
+function road_to_pripyat2_from_jupiter(actor, npc)
+	start_jumpto(147.84,-0.09,-185.14,377853,3765, 0,3,0,"pripyat")
+end
+
+function road_to_jupiter(actor, npc)
+	start_jumpto(331.94, 20.54, -330.93,1246437,3745, 0,0,0,"jupiter")
+end
+
+function road_to_hiding_road(actor, npc)
+	start_jumpto(84.11,4.85,-265.25,603240,4508, 0,2,0,"hiding_road")
+end
+
+function road_to_kolhoz(actor, npc)
+	start_jumpto(13.27,30.01,-103.83,306553,4679, 0,0,0,"level_f-1")
+end
+
+function road_to_test_level(actor, npc)
+	start_jumpto(00.00, 00.00, 00.00,00000000,0000, 0,0,0,"")
+end
+
+function start_jumpto(x,y,z,lv, gv, dx, dy, dz, level_name, instant, delay)
+	level.disable_input()
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+
+	if delay == nil then
+		delay = 1800
+	end
+
+	if sztalker_car.in_car or instant then
+		start_travel(x,y,z,lv, gv, dx, dy, dz, level_name)
+	else
+		sound_object("weapons\\generic_holster"):play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 0.25)
+		sztalker_timer.timeout(delay, function() start_travel(x,y,z,lv, gv, dx, dy, dz, level_name) end)
+	end
+end
+
+function start_travel(x,y,z, lv, gv, dx, dy, dz, level_name)
+	local delayed_travel = jr_na_config.get().gameplay.delayed_travel
+
+	if delayed_travel then
+		if not sztalker_car.in_car then
+			level.change_game_time(math.random(10, 60), 0, 0)
+		end
+	end
+
+    local dest_direction = vector():set(dx,dy,dz)
+	local dest_position = vector():set(x,y,z)
+
+    level.change_level( gv, lv, dest_position, dest_direction )
+end
+
+function actor_in_pripyat()
+	return (level.name()=="l11_pripyat")
+end
+
+function actor_in_pripyat2()
+	return (level.name()=="pripyat")
+end
+
+function actor_in_marsh()
+	return (level.name()=="marsh")
+end
+
+function marsh_travel_allowed(trader, actor)
+	return not relation_manager.stranger_is_enemy(trader, actor)
+end
+
+
+function drive_to_garbage_from_escape()
+	if cheatautodrive == false then
+		return
+	end
+
+	if not sztalker_car.in_car then
+		return
+	end
+
+	if start_teleport then
+		return
+	end
+
+	if has_alife_info("gar_hellcar_dialog_end") or has_alife_info("gar_hellcar_death") then
+		start_jumpto(16.37,0.49,-250.74,188782,264, 0, 0, 0, "l02_garbage")
+		start_teleport = true
+	end
+end
+
+function drive_to_escape_from_garbage()
+	if cheatautodrive == false then
+		return
+	end
+
+	if not sztalker_car.in_car then
+		return
+	end
+
+	if start_teleport then
+		return
+	end
+
+	start_jumpto(29.79,5.97,608.11,310541,204, 0, -3, 0, "L01_Escape")
+	start_teleport = true
+end
+
+function drive_to_bar_from_garbage()
+	if cheatautodrive == false then
+		return
+	end
+
+	if not sztalker_car.in_car then
+		return
+	end
+
+	if start_teleport then
+		return
+	end
+
+	if dialogs.actor_in_dolg() == true or has_alife_info("gar_free_pass") then
+		start_jumpto(294.39,3.53,-143.40,70860,1171, 0, 1, 0, "l05_bar")
+		start_teleport = true
+	end
+end
+
+function drive_to_garbage_from_bar()
+	if cheatautodrive == false then
+		return
+	end
+
+	if not sztalker_car.in_car then
+		return
+	end
+
+	if start_teleport then
+		return
+	end
+
+	if dialogs.actor_in_dolg() == true or has_alife_info("gar_free_pass") then
+		start_jumpto(24.90,0.44,169.10,198453,358, 0, -3, 0, "l02_garbage")
+		start_teleport = true
+	end
+end
+
+function drive_to_predbannik_from_escape(trader, actor)
+	if cheatautodrive == false then
+		return
+	end
+
+	if not sztalker_car.in_car then
+		return
+	end
+
+	if relation_manager.military_is_enemy(trader, actor) then
+		return
+	end
+
+	if start_teleport then
+		return
+	end
+
+	start_jumpto(-560.41,13.89,193.92,89255,3879, 0, 3, 0, "predbannik")
+	start_teleport = true
+end
+
+function drive_to_escape_from_predbannik(trader, actor)
+	if cheatautodrive == false then
+		return
+	end
+
+	if not sztalker_car.in_car then
+		return
+	end
+
+	if relation_manager.military_is_enemy(trader, actor) then
+		return
+	end
+
+	if start_teleport then
+		return
+	end
+
+	start_jumpto(-130.19,-11.35,-160.22,121497,44, 0, 0, 0, "L01_Escape")
+	start_teleport = true
+end
+
+function drive_to_limansk_from_dc()
+	if cheatautodrive == false then
+		return
+	end
+
+	if not sztalker_car.in_car then
+		return
+	end
+
+	if start_teleport then
+		return
+	end
+
+	start_jumpto(-31.42,-5.02,-243.45,9691,2992, 0, -1, 0, "limansk")
+	start_teleport = true
+end
+
+function drive_to_dc_from_limansk()
+	if cheatautodrive == false then
+		return
+	end
+
+	if not sztalker_car.in_car then
+		return
+	end
+
+	if start_teleport then
+		return
+	end
+
+	start_jumpto(-310.55,-1.33,12.28,40329,5064, 0, -1.35, 0, "deadcity")
+	start_teleport = true
+end
+
+function drive_to_military_from_bar()
+	if cheatautodrive == false then
+		return
+	end
+
+	if not sztalker_car.in_car then
+		return
+	end
+
+	if start_teleport then
+		return
+	end
+
+	start_jumpto(-235.33,-21.90,102.19,96685,1716, 0, -0.69, 0, "l07_military")
+	start_teleport = true
+end
+
+function drive_to_bar_from_military()
+	if cheatautodrive == false then
+		return
+	end
+
+	if not sztalker_car.in_car then
+		return
+	end
+
+	if start_teleport then
+		return
+	end
+
+	start_jumpto(56.33,-0.00,158.11,26189,1241, 0, 3.14, 0, "l05_bar")
+	start_teleport = true
+end
+
+function teleport_to_labx14()
+	if not db.actor or not has_alife_info("freeplay") then
+		return
+	end
+
+	if has_alife_info("labx_14_return_to_sarcofag") or has_alife_info("game_end_na") then
+		db.actor:set_actor_position(vector():set(1035.12,-0.0999,229.564))
+		return
+	end
+
+	if not has_alife_info("lab_x14_teleported") then
+		db.actor:give_info_portion("lab_x14_teleported")
+	end
+
+	if start_teleport then
+		return
+	end
+
+	local sound = sound_object("anomaly\\teleport_incoming")
+	sound:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+	start_jumpto(0.42, -34.48, -12.75, 2061, 5377, 0, 1.89, 0, "lab_x14", true)
+	start_teleport = true
+end
+
+function teleport_to_limansk_portal()
+	local a = vector()
+	a.x = -51.89
+	a.y = -10.74
+	a.z = -179.49
+
+	if not has_alife_info("limansk_secret_device_big_start") then
+		return
+	end
+
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+
+	if has_alife_info("limansk_door_portal_open") then
+		db.actor:disable_info_portion("limansk_door_portal_open")
+	end
+
+	if not has_alife_info("limansk_secret_device_big_gain") then
+		db.actor:give_info_portion("limansk_secret_device_big_gain")
+	end
+
+	local sound = sound_object("anomaly\\gravi_idle01")
+	sound:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+end
+
+function teleport_from_limansk_portal()
+	if start_teleport then
+		return
+	end
+
+	if not has_alife_info("limansk_secret_device_big_have") then
+		inv_box_1 = level_object_by_sid (story_ids.lima_podval_seif)
+		out_object = db.actor
+		in_object  = inv_box_1
+		local function transfer_player_item (item)
+			out_object:transfer_item(item, in_object)
+		end
+		db.actor:inventory_for_each(transfer_player_item)
+		start_jumpto(50.89, 6.23, -259.20, 339439, 4364, 0, 0, 0, "yantar_old", true)
+		start_teleport = true
+	else
+		local a = vector()
+		a.x = -55.33
+		a.y = -11.20
+		a.z = -176.19
+		level.add_pp_effector ("teleport.ppe", 2006, false)
+		db.actor:set_actor_position(a)
+	end
+
+	local sound = sound_object("anomaly\\gravi_idle01")
+	sound:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+end
+
+function teleport_to_yantar_bunker()
+	if relation_manager.ecolog_is_enemy(nil, nil) then
+		return
+	end
+
+	local a = vector()
+	a.x = 29.09
+	a.y = -11.68
+	a.z = -279.85
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+
+	local sound = sound_object("anomaly\\gravi_idle01")
+	sound:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+end
+
+function teleport_from_marsh_baza()
+end
+
+function teleport_to_csund_start()
+	if has_alife_info("cs_agroprom_underground_free") then
+		return
+	end
+
+	local black_biblio = alife():story_object(story_ids.csund_bibliotekar_black_quest)
+
+	if black_biblio == nil or not black_biblio:alive() then
+		db.actor:give_info_portion("cs_agroprom_underground_free")
+		return
+	end
+
+	local a = vector()
+	a.x = 109.95
+	a.y = -2.58
+	a.z = -22.23
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+
+	local sound = sound_object("anomaly\\gravi_idle01")
+	sound:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+	news_manager.send_tip(db.actor, "csund_exit_failed", nil, nil, 3000)
+end
+
+function teleport_to_control_center()
+	if not relation_manager.actor_in_monolith(nil, nil) then
+		if db.actor:character_community() ~= "actor_developer" then
+			return
+		end
+	end
+
+	local a = vector()
+	a.x = -5.53
+	a.y = -34.47
+	a.z = 24.90
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+
+	local sound = sound_object("anomaly\\gravi_idle01")
+	sound:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+end
+
+function teleport_to_warlab_exit(actor, npc)
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+
+	db.actor:set_actor_direction(-3.10)
+	db.actor:set_actor_position(vector():set(5.60, 8.32, 16.73))
+
+	local sound = sound_object("anomaly\\gravi_idle01")
+	sound:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+end
+
+function teleport_from_atp()
+	if start_teleport then
+		return
+	end
+
+	if not has_alife_info("atp_nemec_ataka_start") then
+		level.add_pp_effector ("teleport.ppe", 2006, false)
+
+		db.actor:set_actor_position(vector():set(-177.71, 3.78, 229.13))
+
+		local sound = sound_object("anomaly\\gravi_idle01")
+		sound:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+
+		sztalker_timer.timeout(1000, function() db.actor:give_info_portion("atp_nemec_ataka_start") end)
+		return
+	end
+
+	if has_alife_info("atp_nemec_ataka_start") and not has_alife_info("avp_secret_device_done") then
+		inv_box_1 = level_object_by_sid (story_ids.atp_teleport_box)
+		out_object = db.actor
+		in_object = inv_box_1
+
+		local function transfer_player_item (item)
+			out_object:transfer_item(item, in_object)
+		end
+
+		db.actor:inventory_for_each(transfer_player_item)
+
+		if not has_alife_info("atp_nemec_ataka_have") then
+			db.actor:give_info_portion("atp_nemec_ataka_fail")
+		end
+
+		start_jumpto(7.5, -1.7, 0.3,142,5360, 0,0,0,"digger_stash", true)
+		start_teleport = true
+		return
+	end
+
+	if not has_alife_info("atp_nemci_ataka_start") then
+		level.add_pp_effector ("teleport.ppe", 2006, false)
+
+		db.actor:set_actor_position(vector():set(448.47,-4.86,-25.46))
+
+		local sound = sound_object("anomaly\\gravi_idle01")
+		sound:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+
+		sztalker_timer.timeout(250, function() db.actor:give_info_portion("atp_nemci_ataka_start") end)
+		return
+	end
+
+	if has_alife_info("atp_nemci_ataka_have") and not has_alife_info("warlab_floppy_quest_done") then
+		inv_box_1 = level_object_by_sid (story_ids.atp_teleport_box)
+		out_object = db.actor
+		in_object = inv_box_1
+
+		local function transfer_player_item (item)
+			out_object:transfer_item(item, in_object)
+		end
+
+		db.actor:inventory_for_each(transfer_player_item)
+
+		start_jumpto(5.60, 8.32, 16.73,5421,3198, 0,0,0,"warlab", true)
+		start_teleport = true
+		return
+	end
+end
+
+function teleport_to_atp_from_digger_stash()
+	if has_alife_info("avp_secret_device_have") and not has_alife_info("atp_nemec_ataka_start") and not has_alife_info("atp_first_teleport") then
+
+		level.disable_input()
+		local snd_obj = xr_sound.get_safe_sound_object([[affects\psy_blackout]])
+		snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+		level.add_cam_effector("camera_effects\\prison_1.anm",2506,false,"")
+		news_manager.send_tip(db.actor, "atp_exit_tip_01", 0, "cheater", 5000)
+		db.actor:give_info_portion("atp_first_teleport")
+
+		inv_box_1 = level_object_by_sid (story_ids.digger_stash_homyak_box)
+		out_object = db.actor
+		in_object = inv_box_1
+
+		local function transfer_player_item (item)
+			out_object:transfer_item(item, in_object)
+		end
+
+		db.actor:inventory_for_each(transfer_player_item)
+
+		local spawn_items = {}
+
+		table.insert(spawn_items, "wpn_walther38")
+		table.insert(spawn_items, "ammo_9x19_fmj")
+		table.insert(spawn_items, "wpn_stg44")
+		table.insert(spawn_items, "ammo_7.92x33_fmj")
+		table.insert(spawn_items, "wpn_knife_nato")
+		table.insert(spawn_items, "medkit")
+		table.insert(spawn_items, "medkit")
+		table.insert(spawn_items, "bandage")
+		table.insert(spawn_items, "bandage")
+		table.insert(spawn_items, "flaska_water")
+		table.insert(spawn_items, "flaska_water")
+
+		local k,v = 0,0
+
+		for k,v in pairs(spawn_items) do
+			alife():create(v,db.actor:position(),db.actor:level_vertex_id(),db.actor:game_vertex_id(),db.actor:id())
+		end
+
+		start_jumpto(448.47,-4.86,-25.46,1021382,2860, 0,1.5,0,"atp_for_test22", false, 8000)
+	end
+end
+
+function teleport_to_atp_from_warlab()
+	if has_alife_info("warlab_floppy_have") and not has_alife_info("atp_nemci_ataka_start") and not has_alife_info("atp_second_teleport") then
+
+		level.disable_input()
+		local snd_obj = xr_sound.get_safe_sound_object([[affects\psy_blackout]])
+		snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+		level.add_cam_effector("camera_effects\\prison_1.anm",2506,false,"")
+		news_manager.send_tip(db.actor, "atp_exit_tip_02", 0, "cheater", 5000)
+		db.actor:give_info_portion("atp_second_teleport")
+
+		inv_box_1 = level_object_by_sid (story_ids.warlab_fight_box)
+		out_object = db.actor
+		in_object = inv_box_1
+
+		local function transfer_player_item (item)
+			out_object:transfer_item(item, in_object)
+		end
+
+		db.actor:inventory_for_each(transfer_player_item)
+
+		local spawn_items = {}
+
+		table.insert(spawn_items, "wpn_type14")
+		table.insert(spawn_items, "wpn_type30")
+		table.insert(spawn_items, "wpn_type38")
+		table.insert(spawn_items, "ammo_8x22_fmj")
+		table.insert(spawn_items, "ammo_6.5x50_fmj")
+		table.insert(spawn_items, "medkit")
+		table.insert(spawn_items, "medkit")
+		table.insert(spawn_items, "bandage")
+		table.insert(spawn_items, "bandage")
+		table.insert(spawn_items, "flaska_water")
+		table.insert(spawn_items, "flaska_water")
+
+		local k,v = 0,0
+
+		for k,v in pairs(spawn_items) do
+			alife():create(v,db.actor:position(),db.actor:level_vertex_id(),db.actor:game_vertex_id(),db.actor:id())
+		end
+
+		start_jumpto(448.47,-4.86,-25.46,1021382,2860, 0,1.5,0,"atp_for_test22", false, 8000)
+	end
+end
+
+function teleport_to_avp_exit()
+	if has_alife_info("avp_secret_device_have") and not has_alife_info("avp_secret_device_done") then
+		news_manager.send_tip(db.actor, "avp_exit_tip_02", 0, "saharov", 5000)
+		db.actor:set_actor_position(vector():set(-374.32,84.81,207.92))
+	end
+end
+
+function teleport_to_dark_forest_one()
+	if level.name() ~= "l03u_agr_underground" then
+		return
+	end
+
+	if has_alife_info("agr_find_ghost_start") then
+		return
+	end
+
+	if has_alife_info("df_first_teleport") then
+		return
+	end
+
+	level.disable_input()
+	news_manager.send_tip(db.actor, "df_exit_tip_01", 0, "ada", 5000)
+	local snd_obj = xr_sound.get_safe_sound_object([[affects\psy_blackout]])
+	snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+	level.add_cam_effector("camera_effects\\prison_1.anm",2506,false,"")
+	db.actor:give_info_portion("df_first_teleport")
+
+	inv_box_1 = level_object_by_sid (story_ids.agr_homyak_box)
+	out_object = db.actor
+	in_object = inv_box_1
+
+	local function transfer_player_item (item)
+		out_object:transfer_item(item, in_object)
+	end
+
+	db.actor:inventory_for_each(transfer_player_item)
+
+	start_jumpto(-113.30,-0.71,421,602562,4658, 0,-3,0,"dark_forest", false, 8000)
+end
+
+function teleport_to_dark_forest_two()
+	if level.name() ~= "puzir" then
+		return
+	end
+
+	if not has_alife_info("agr_find_ghost_start") then
+		return
+	end
+
+	if has_alife_info("df_second_teleport") then
+		return
+	end
+
+	level.disable_input()
+	news_manager.send_tip(db.actor, "df_exit_tip_02", 0, "flower", 5000)
+	local snd_obj = xr_sound.get_safe_sound_object([[affects\psy_blackout]])
+	snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+	level.add_cam_effector("camera_effects\\prison_1.anm",2506,false,"")
+	db.actor:give_info_portion("df_second_teleport")
+
+	inv_box_1 = level_object_by_sid (story_ids.puzir_teleport_box)
+	out_object = db.actor
+	in_object = inv_box_1
+
+	local function transfer_player_item (item)
+		out_object:transfer_item(item, in_object)
+	end
+
+	db.actor:inventory_for_each(transfer_player_item)
+
+	local spawn_items = {}
+
+	table.insert(spawn_items, "wpn_machete")
+	table.insert(spawn_items, "monolit_outfit")
+	table.insert(spawn_items, "medkit")
+	table.insert(spawn_items, "medkit")
+	table.insert(spawn_items, "medkit")
+	table.insert(spawn_items, "bandage")
+	table.insert(spawn_items, "bandage")
+	table.insert(spawn_items, "bandage")
+	table.insert(spawn_items, "flaska_water")
+	table.insert(spawn_items, "flaska_water")
+	table.insert(spawn_items, "flaska_water")
+
+	local k,v = 0,0
+
+	for k,v in pairs(spawn_items) do
+		alife():create(v,db.actor:position(),db.actor:level_vertex_id(),db.actor:game_vertex_id(),db.actor:id())
+	end
+
+	start_jumpto(-113.30,-0.71,421,602562,4658, 0,-3,0,"dark_forest", false, 8000)
+end
+
+function teleport_to_dark_forest_three()
+	if level.name() ~= "l11_pripyat" then
+		return
+	end
+
+	if has_alife_info("df_third_teleport") then
+		return
+	end
+
+	level.disable_input()
+	local snd_obj = xr_sound.get_safe_sound_object([[ambient\earthquake]])
+	snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+	level.add_cam_effector("camera_effects\\earthquake.anm", 1974, false, "")
+	db.actor:give_info_portion("df_third_teleport")
+
+	inv_box_1 = level_object_by_sid (story_ids.pri_teleport_box)
+	out_object = db.actor
+	in_object = inv_box_1
+
+	local function transfer_player_item (item)
+		out_object:transfer_item(item, in_object)
+	end
+
+	db.actor:inventory_for_each(transfer_player_item)
+
+	sztalker.release_df_black_wolfes()
+	start_jumpto(-113.30,-0.71,421,602562,4658, 0,-3,0,"dark_forest", false, 8000)
+end
+
+function teleport_from_dark_forest()
+	if start_teleport then
+		return
+	end
+
+	if has_alife_info("df_ada_quest_have") and not has_alife_info("df_ada_quest_done") then
+		db.actor:give_info_portion("df_ada_quest_done")
+
+		inv_box_1 = level_object_by_sid (story_ids.df_teleport_box)
+		out_object = db.actor
+		in_object = inv_box_1
+
+		local function transfer_player_item (item)
+			if item and (item:section() == "medkit" or item:section() == "bandage" or item:section() == "voda") then
+				out_object:transfer_item(item, in_object)
+			end
+		end
+
+		start_teleport = true
+		db.actor:inventory_for_each(transfer_player_item)
+		start_jumpto(-69.49, -6.87, -82.66,3490,717, 0,0,0,"l03u_agr_underground", false, 3000)
+
+	elseif has_alife_info("df_artefact_quest_have") and not has_alife_info("df_artefact_quest_done") then
+		db.actor:give_info_portion("df_artefact_quest_done")
+
+		local function transfer_player_item (item)
+			if string.find(item:name(), "df_flower_ameliya") 
+			    or item:section() == "medkit" 
+			    or item:section() == "bandage"
+			    or item:section() == "flaska_water" 
+			    or item:section() == "voda"
+			    or item:section() == "wpn_machete" 
+			    or item:section() == "monolit_outfit" then
+				alife():release(alife():object(item:id()))
+			end
+		end
+
+		start_teleport = true
+		db.actor:inventory_for_each(transfer_player_item)
+		start_jumpto(45.178, -0.001, 12.938,225723,2885, 0,0,0,"puzir", false, 3000)
+	elseif has_alife_info("df_ada2_quest_have") and not has_alife_info("df_ada_quest2_done") then
+		db.actor:give_info_portion("df_ada2_quest_done")
+
+		inv_box_1 = level_object_by_sid (story_ids.df_teleport_box)
+		out_object = db.actor
+		in_object = inv_box_1
+
+		local function transfer_player_item (item)
+			if item and (item:section() == "medkit" or item:section() == "bandage") then
+				out_object:transfer_item(item, in_object)
+			end
+		end
+
+		start_teleport = true
+		db.actor:inventory_for_each(transfer_player_item)
+		start_jumpto(103.140, 3.999, 126.073,215826,2182, 0,1,0,"l11_pripyat", false, 3000)
+	else
+		level.add_pp_effector ("teleport.ppe", 2006, false)
+		db.actor:set_actor_position(vector():set(-113.30,-0.71,421))
+		local sound = sound_object("anomaly\\gravi_idle01")
+		sound:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+
+		if not has_alife_info("agr_find_ghost_start") then
+			news_manager.send_tip(db.actor, "df_exit_tip_01", 0, "ada", 5000)
+		elseif has_alife_info("df_artefact_quest_start") and not has_alife_info("df_artefact_quest_have") then
+			news_manager.send_tip(db.actor, "df_exit_tip_02", 0, "flower", 5000)
+		elseif has_alife_info("df_ada2_quest_start") and not has_alife_info("df_ada2_quest_have") then
+			news_manager.send_tip(db.actor, "df_exit_tip_01", 0, "ada", 5000)
+		end
+	end
+end
+
+function teleport_to_rinok()
+	level.disable_input()
+	local snd_obj = xr_sound.get_safe_sound_object([[affects\psy_blackout]])
+	snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+	level.add_cam_effector("camera_effects\\prison_1.anm",2506,false,"")
+	start_jumpto(-20, 0.50, 44, 8287, 5308, 0, 3, 0, "l03_rinok", false, 8000)
+end
+
+function went_to_rinok(actor, npc)
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	sztalker_timer.timeout(500, function() db.actor:set_actor_position(vector():set(-20, 0.50, 44)) end)
+end
+
+function teleport_to_pogost()
+	db.actor:set_actor_position(vector():set(55.59, -0.35, -59.98))
+	level.disable_input()
+	local snd_obj = xr_sound.get_safe_sound_object([[affects\psy_blackout]])
+	snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+	level.add_cam_effector("camera_effects\\prison_1.anm",2506,false,"")
+
+	sztalker_timer.timeout(750, function() db.actor:give_info_portion("rinok_ada2_quest_done") end)
+
+	inv_box_1 = level_object_by_sid (story_ids.rinok_teleport_box)
+	out_object = db.actor
+	in_object = inv_box_1
+
+	local function transfer_player_item (item)
+		out_object:transfer_item(item, in_object)
+	end
+
+	db.actor:inventory_for_each(transfer_player_item)
+
+	local spawn_items = {}
+
+	table.insert(spawn_items, "wpn_p12")
+	table.insert(spawn_items, "ammo_12x70_shrap")
+	table.insert(spawn_items, "wpn_wunderwaffe")
+	table.insert(spawn_items, "ammo_gauss")
+	table.insert(spawn_items, "outfit_exo_m2")
+	table.insert(spawn_items, "medkit_scientic")
+	table.insert(spawn_items, "medkit_scientic")
+	table.insert(spawn_items, "medkit_scientic")
+	table.insert(spawn_items, "medkit_scientic")
+	table.insert(spawn_items, "medkit_scientic")
+	table.insert(spawn_items, "bandage")
+	table.insert(spawn_items, "bandage")
+	table.insert(spawn_items, "bandage")
+	table.insert(spawn_items, "bandage")
+	table.insert(spawn_items, "bandage")
+	table.insert(spawn_items, "kefir")
+	table.insert(spawn_items, "kefir")
+	table.insert(spawn_items, "kefir")
+	table.insert(spawn_items, "kefir")
+	table.insert(spawn_items, "kefir")
+	table.insert(spawn_items, "wpn_m134")
+	table.insert(spawn_items, "ammo_7.62x51_box")
+	table.insert(spawn_items, "wpn_crowbar_punk")
+
+	local k,v = 0,0
+
+	for k,v in pairs(spawn_items) do
+		alife():create(v,db.actor:position(),db.actor:level_vertex_id(),db.actor:game_vertex_id(),db.actor:id())
+	end
+
+	start_jumpto(3,0,-137,21737,5334,0,0,0,"l04_pogost",false,5000)
+end
+
+function teleport_from_pogost()
+	if start_teleport then
+		return
+	end
+
+	if not has_alife_info("pogost_exit_quest_have") then
+		level.add_pp_effector ("teleport.ppe", 2006, false)
+
+		db.actor:set_actor_position(vector():set(3, 0, -137))
+
+		local sound = sound_object("anomaly\\gravi_idle01")
+		sound:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+	else
+		start_teleport = true
+		db.actor:give_info_portion("pogost_exit_quest_done")
+		start_jumpto(124.15, 17.84, 309.49, 26214, 5284, 0, 3, 0, "l02_dd", false, 3000)
+	end
+end
+
+function teleport_from_dd()
+	if start_teleport then
+		return
+	end
+
+	if not has_alife_info("dd_exit_quest_have") then
+		level.add_pp_effector ("teleport.ppe", 2006, false)
+
+		db.actor:set_actor_position(vector():set(124.15, 17.84, 309.49))
+
+		local sound = sound_object("anomaly\\gravi_idle01")
+		sound:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+	elseif has_alife_info("dd_exit_quest_have") and not has_alife_info("dd_exit_quest_have_2") then
+		level.add_pp_effector ("teleport.ppe", 2006, false)
+
+		db.actor:set_actor_position(vector():set(-44.29, 0.47, 44.91))
+
+		local sound = sound_object("anomaly\\gravi_idle01")
+		sound:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+		db.actor:give_info_portion("dd_exit_quest_have_2")
+		news_manager.send_tip(db.actor, "dd_mission_tip_01", nil, "catbag", 10000)
+	else
+		start_teleport = true
+		db.actor:give_info_portion("dd_exit_quest_done")
+		start_jumpto(-28.59,0.23,46.63,85,2403, 0,1.6,0,"l12u_sarcofag", false, 8000)
+	end
+end
+
+function teleport_to_sarcofag()
+	level.disable_input()
+	local snd_obj = xr_sound.get_safe_sound_object([[affects\psy_blackout]])
+	snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+	level.add_cam_effector("camera_effects\\prison_1.anm",2506,false,"")
+	start_jumpto(-28.59,0.23,46.63,85,2403, 0,1.6,0,"l12u_sarcofag", false, 8000)
+end
+
+function teleport_to_escape_bunker()
+	start_jumpto(-246.72, -24.79, -134.43,11713,4, 0,-1.4,0,"l01_escape", true)
+end
+
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
