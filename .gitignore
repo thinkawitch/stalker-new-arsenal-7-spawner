@@ -1,5 +1,7 @@
 
-# game dir, allow only changed gamedata files
+# game dir, allow only changed gamedata files and some github related
 /*
 !.gitignore
+!.gitattributes
 !gamedata/
+!spawn-menu-example.png
