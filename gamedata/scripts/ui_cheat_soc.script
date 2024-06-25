@@ -44,10 +44,10 @@ function cheat_menu:FillList()
 	local tbl
 	if self.menu_index == 9 then  -- список локаций
 		tbl = {}
-		table.insert(tbl,{section = "road_to_esc_sidor", name = "Кордон. Деревня \"у Сидоровича\""})
-		table.insert(tbl,{section = "road_to_esc_kpp", name = "Кордон. Старый КПП"})
-		table.insert(tbl,{section = "road_to_esc_elevator", name = "Кордон. Элеватор"})
-		table.insert(tbl,{section = "road_to_esc_kpp_new", name = "Кордон. Новый КПП"})
+		table.insert(tbl,{section = "place_me_to_esc_sidor", name = "Кордон. Деревня \"у Сидоровича\""})
+		table.insert(tbl,{section = "place_me_to_esc_kpp", name = "Кордон. Старый КПП"})
+		table.insert(tbl,{section = "place_me_to_esc_elevator", name = "Кордон. Элеватор"})
+		table.insert(tbl,{section = "place_me_to_esc_kpp_new", name = "Кордон. Новый КПП"})
 		table.insert(tbl,{section = "road_to_garbage_angar", name = "Свалка. Заброшенный ангар"})
 		table.insert(tbl,{section = "road_to_garbage_car", name = "Свалка. Кладбище брошенной техники"})
 		table.insert(tbl,{section = "road_to_bar_bar", name = "Завод \"Росток\". Бар \"100 Рентген\""})
