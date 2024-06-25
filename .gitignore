@@ -6,3 +6,8 @@
 !gamedata/
 !README.md
 !spawn-menu-example.png
+
+# show coordinates in hud, for dev only
+gamedata/config/ui/ui_custom_msgs.xml
+gamedata/scripts/andrew.script
+gamedata/scripts/bind_stalker.script

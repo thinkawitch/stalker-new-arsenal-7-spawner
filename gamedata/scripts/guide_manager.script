@@ -363,10 +363,6 @@ function road_to_esc_elevator(actor, npc)
 	start_jumpto(3.825,9.243,96.881,278115,85, 0,1.5,0,"L01_escape")
 end
 
-function road_to_esc_kpp_new(actor, npc)
-	start_jumpto(-169.8882,-25.4353,-353.0877, 79712, 31, 1,0,-0.183, "L01_escape")
-end
-
 function road_to_garbage_angar(actor, npc)
 	start_jumpto(-73.497,0.679,37.154,129068,326, 0, 3, 0, "l02_garbage")
 end
@@ -419,10 +415,6 @@ function road_to_agroprom_underground(actor, npc)
 	start_jumpto(-38.984909,-3.895501,38.022346,4722,724, 0,3,0,"l03u_agr_underground")
 end
 
-function road_to_agroprom_base(actor, npc)
-	start_jumpto(-152.6411,-0.0015,-198.3029, 85075, 551, -0.3,0,1, "l03_agroprom")
-end
-
 function road_to_pripyat_hotel(actor, npc)
 	start_jumpto(111.059,3.997,121.136,222185,2182, 0,1,0,"l11_pripyat")
 end
@@ -433,19 +425,6 @@ end
 
 function road_to_aes1_camp(actor, npc)
 	start_jumpto(369.756,0.148,-245.252,158548,2347, 0,0,0,"l12_stancia")
-end
-
-function road_to_aes2_enter(actor, npc)
-	-- pos 369.779 0.1498 -244.4590
-	-- lvid 158549
-	-- gvid 2347
-	-- dir -0.017 0.00 0.99
-	-- start_jumpto(369.756,0.148,-245.252,158548,2347, 0,0,0,"l12_stancia")
-	start_jumpto(851.548,-0.099,80.515, 218381, 2634, -0.006,0,0.999, "l12_stancia_2")
-end
-
-function road_to_aes2_traider(actor, npc)
-	start_jumpto(517.5938,18.2038,275.6838, 161784, 2617, 0.9699,0,0.2431, "l12_stancia_2")
 end
 
 function road_to_radar_tunnel(actor, npc)
@@ -462,10 +441,6 @@ end
 
 function road_to_pred_bar(actor, npc)
 	start_jumpto(48.511,3.928,89.941,1019031,4005, 0,-1,0,"predbannik")
-end
-
-function road_to_pred_mil_trader(actor, npc)
-	start_jumpto(-439.8151,-5.7410,-147.9705, 269518, 3906, 1,0,-0.5, "predbannik")
 end
 
 function road_to_marsh_baza(actor, npc)
@@ -511,44 +486,8 @@ function road_to_jupiter(actor, npc)
 	start_jumpto(331.94, 20.54, -330.93,1246437,3745, 0,0,0,"jupiter")
 end
 
-function road_to_jupiter_scient(actor, npc)
-	start_jumpto(-192.4604,-4.4475,61.0274, 390688, 3716, -1,0,0.5, "jupiter")
-end
-
-function road_to_jupiter_janov(actor, npc)
-	start_jumpto(-57.0894,3.4853,202.2094, 623864, 3717, 1,0,-0.5, "jupiter")
-end
-
-function road_to_zaton(actor, npc)
-	start_jumpto(431.4067,31.3390,-412.7567, 1672955, 3694, 0,0,1, "zaton")
-end
-
-function road_to_zaton_skadovsk(actor, npc)
-	start_jumpto(116.9431,-3.9360,177.5393, 167208, 3686, 0,0,1, "zaton")
-end
-
 function road_to_hiding_road(actor, npc)
 	start_jumpto(84.11,4.85,-265.25,603240,4508, 0,2,0,"hiding_road")
-end
-
-function road_to_dead_city_1(actor, npc)
-	start_jumpto(117.0543,8.9830,-86.9285, 374006, 5236, 0.7,0,0.7, "deadcity")
-end
-
-function road_to_dead_city_2(actor, npc)
-	start_jumpto(-17.7374,2.0169,-89.1126, 284015, 5188, 0,0,1, "deadcity")
-end
-
-function road_to_limansk_west(actor, npc)
-	start_jumpto(-58.6521,-5.0446,-202.7060, 1816, 2990, 1,0,0, "limansk")
-end
-
-function road_to_promzone(actor, npc)
-	start_jumpto(32.8520,11.2469,-585.7290, 260955, 4889, 0,0,1, "promzone")
-end
-
-function road_to_generators(actor, npc)
-	start_jumpto(-62.1650,32.9639,-534.0401, 263124, 3100, 0,0,1, "generators")
 end
 
 function road_to_kolhoz(actor, npc)
@@ -1415,3 +1354,440 @@ end
 
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
+
+-- new functions
+
+
+function road_to_esc_kpp_new(actor, npc)
+	start_jumpto(-169.8882,-25.4353,-353.0877, 79712, 31, 1,0,-0.183, "L01_escape")
+end
+
+function road_to_agroprom_base(actor, npc)
+	start_jumpto(-152.6411,-0.0015,-198.3029, 85075, 551, -0.3,0,1, "l03_agroprom")
+end
+
+function road_to_jupiter_scient(actor, npc)
+	start_jumpto(-192.4604,-4.4475,61.0274, 390688, 3716, -1,0,0.5, "jupiter")
+end
+
+function road_to_jupiter_janov(actor, npc)
+	start_jumpto(-57.0894,3.4853,202.2094, 623864, 3717, 1,0,-0.5, "jupiter")
+end
+
+function road_to_zaton(actor, npc)
+	start_jumpto(431.4067,31.3390,-412.7567, 1672955, 3694, 0,0,1, "zaton")
+end
+
+function road_to_zaton_skadovsk(actor, npc)
+	start_jumpto(116.9431,-3.9360,177.5393, 167208, 3686, 0,0,1, "zaton")
+end
+
+function road_to_dead_city_1(actor, npc)
+	start_jumpto(117.0543,8.9830,-86.9285, 374006, 5236, 0.7,0,0.7, "deadcity")
+end
+
+function road_to_dead_city_2(actor, npc)
+	start_jumpto(-17.7374,2.0169,-89.1126, 284015, 5188, 0,0,1, "deadcity")
+end
+
+function road_to_limansk_west(actor, npc)
+	start_jumpto(-58.6521,-5.0446,-202.7060, 1816, 2990, 1,0,0, "limansk")
+end
+
+function road_to_promzone(actor, npc)
+	start_jumpto(32.8520,11.2469,-585.7290, 260955, 4889, 0,0,1, "promzone")
+end
+
+function road_to_generators(actor, npc)
+	start_jumpto(-62.1650,32.9639,-534.0401, 263124, 3100, 0,0,1, "generators")
+end
+
+function road_to_aes2_enter(actor, npc)
+	-- pos 369.779 0.1498 -244.4590
+	-- lvid 158549
+	-- gvid 2347
+	-- dir -0.017 0.00 0.99
+	-- start_jumpto(369.756,0.148,-245.252,158548,2347, 0,0,0,"l12_stancia")
+	start_jumpto(851.548,-0.099,80.515, 218381, 2634, -0.006,0,0.999, "l12_stancia_2")
+end
+
+function road_to_aes2_traider(actor, npc)
+	start_jumpto(517.5938,18.2038,275.6838, 161784, 2617, 0.9699,0,0.2431, "l12_stancia_2")
+end
+
+function road_to_pred_mil_trader(actor, npc)
+	start_jumpto(-439.8151,-5.7410,-147.9705, 269518, 3906, 1,0,-0.5, "predbannik")
+end
+
+
+-- -------
+
+function actor_in_esc()
+	return (level.name()=="l01_escape")
+end
+
+function actor_in_garbage()
+	return (level.name()=="l02_garbage")
+end
+
+function actor_in_agroprom()
+	return (level.name()=="l03_agroprom")
+end
+
+function actor_in_agr_underground()
+	return (level.name()=="l03u_agr_underground")
+end
+
+function actor_in_darkvalley()
+	return (level.name()=="l04_darkvalley")
+end
+
+function actor_in_labx18()
+	return (level.name()=="l04u_labx18")
+end
+
+function actor_in_bar()
+	return (level.name()=="l05_bar")
+end
+
+function actor_in_rostok()
+	return (level.name()=="l06_rostok")
+end
+
+function actor_in_military()
+	return (level.name()=="l07_military")
+end
+
+function actor_in_yantar()
+	return (level.name()=="l08_yantar")
+end
+
+function actor_in_radar()
+	return (level.name()=="l10_radar")
+end
+
+function actor_in_aes1()
+	return (level.name()=="l12_stancia")
+end
+
+function actor_in_aes2()
+	return (level.name()=="l12_stancia_2")
+end
+
+function actor_in_predbannik()
+	return (level.name()=="predbannik")
+end
+
+function actor_in_swamp()
+	return (level.name()=="swamp_old")
+end
+
+function actor_in_red_forest()
+	return (level.name()=="red_forest")
+end
+
+function actor_in_lost_village()
+	return (level.name()=="lost_village")
+end
+
+function actor_in_hospital()
+	return (level.name()=="hospital")
+end
+
+function actor_in_aver()
+	return (level.name()=="aver")
+end
+
+function actor_in_av_peshera()
+	return (level.name()=="av_peshera")
+end
+
+function actor_in_hiding_road()
+	return (level.name()=="hiding_road")
+end
+
+function actor_in_kolhoz()
+	return (level.name()=="level_f-1")
+end
+
+function actor_in_deadcity()
+	return (level.name()=="deadcity")
+end
+
+function actor_in_limansk()
+	return (level.name()=="limansk")
+end
+
+function actor_in_promzone()
+	return (level.name()=="promzone")
+end
+
+function actor_in_generators()
+	return (level.name()=="generators")
+end
+
+function actor_in_jupiter()
+	return (level.name()=="jupiter")
+end
+
+function actor_in_zaton()
+	return (level.name()=="zaton")
+end
+
+-- -------
+
+function place_to_location(x, y, z)
+	local a = vector()
+	a.x = x
+	a.y = y
+	a.z = z
+	level.add_pp_effector ("teleport.ppe", 2006, false)
+	db.actor:set_actor_position(a)
+	level.change_game_time(math.random(1, 3), 0, 0)
+end
+
+function place_me_to_esc_sidor()
+	if (actor_in_esc()) then went_to_esc_sidor()
+	else road_to_esc_sidor() end
+end
+
+function place_me_to_esc_kpp()
+	if (actor_in_esc()) then went_to_esc_kpp()
+	else road_to_esc_kpp() end
+end
+
+function place_me_to_esc_elevator()
+	if (actor_in_esc()) then went_to_esc_elevator()
+	else road_to_esc_elevator() end
+end
+
+function place_me_to_esc_kpp_new()
+	if (actor_in_esc()) then place_to_location(-169.8882,-25.4353,-353.0877)
+	else road_to_esc_kpp_new() end
+end
+
+
+function place_me_to_garbage_angar()
+	if (actor_in_garbage()) then went_to_garbage_angar()
+	else road_to_garbage_angar() end
+end
+
+function place_me_to_garbage_car()
+	if (actor_in_garbage()) then went_to_garbage_car()
+	else road_to_garbage_car() end
+end
+
+function place_me_to_bar_bar()
+	if (actor_in_bar()) then place_to_location(125.06059265137,-4.3442974090576,28.390350341797)
+	else road_to_bar_bar() end
+end
+
+function place_me_to_rostok_heli()
+	if (actor_in_rostok()) then place_to_location(-287.852,0.799,175.200)
+	else road_to_rostok_heli() end
+end
+
+function place_me_to_darkvalley_zapravka()
+	if (actor_in_darkvalley()) then place_to_location(121.972,8.003,-62.180)
+	else road_to_darkvalley_zapravka() end
+end
+
+function place_me_to_darkvalley_farm()
+	if (actor_in_darkvalley()) then place_to_location(-114.220558,0.028183,-456.839081)
+	else road_to_darkvalley_farm() end
+end
+
+function place_me_to_labx18_lift()
+	if (actor_in_labx18()) then place_to_location(-2.256,9.320,-4.432)
+	else road_to_LabX18_lift() end
+end
+
+function place_me_to_agroprom_north()
+	if (actor_in_agroprom()) then went_to_agroprom_north()
+	else road_to_agroprom_north() end
+end
+
+function place_me_to_agroprom_underground()
+	if (actor_in_agr_underground()) then place_to_location(-38.984909,-3.895501,38.022346)
+	else road_to_agroprom_underground() end
+end
+
+function place_me_to_agroprom_base()
+	if (actor_in_agroprom()) then place_to_location(-152.6411,-0.0015,-198.3029)
+	else road_to_agroprom_base() end
+end
+
+function place_me_to_yantar()
+	if (actor_in_yantar()) then place_to_location(57.046209716797,-11.858985824585,-265.95639404297)
+	else road_to_yantar() end
+end
+
+function place_me_to_military_tower()
+	if (actor_in_military()) then place_to_location(-243.505,-6.402,295.911)
+	else road_to_military_tower() end
+end
+
+function place_me_to_military_freedom_base()
+	if (actor_in_military()) then went_to_military_freedom_base()
+	else road_to_military_freedom_base() end
+end
+
+function place_me_to_military_barrier()
+	if (actor_in_military()) then went_to_military_barrier()
+	else road_to_military_barrier() end
+end
+
+function place_me_to_radar_tunnel()
+	if (actor_in_radar()) then place_to_location(660.181,-43.877,169.558)
+	else road_to_radar_tunnel() end
+end
+
+function place_me_to_radar_secret()
+	if (actor_in_radar()) then place_to_location(303.430,-39.451,-19.401)
+	else road_to_radar_secret() end
+end
+
+function place_me_to_pripyat_hotel()
+	if (actor_in_pripyat()) then place_to_location(111.059,3.997,121.136)
+	else road_to_pripyat_hotel() end
+end
+
+function place_me_to_pripyat_traders()
+	if (actor_in_pripyat()) then place_to_location(201.60,-3.47,207.95)
+	else road_to_pripyat_traders() end
+end
+
+function place_me_to_aes1_camp()
+	if (actor_in_aes1()) then place_to_location(369.756,0.148,-245.252)
+	else road_to_aes1_camp() end
+end
+
+function place_me_to_aes2_enter()
+	if (actor_in_aes2()) then place_to_location(851.548,-0.099,80.515)
+	else road_to_aes2_enter() end
+end
+
+function place_me_to_aes2_traider()
+	if (actor_in_aes2()) then place_to_location(517.5938,18.2038,275.6838)
+	else road_to_aes2_traider() end
+end
+
+function place_me_to_pred_sidor()
+	if (actor_in_predbannik()) then went_to_pred_sidor()
+	else road_to_pred_sidor() end
+end
+
+function place_me_to_pred_bar()
+	if (actor_in_predbannik()) then went_to_pred_bar()
+	else road_to_pred_bar() end
+end
+
+function place_me_to_pred_mil_trader()
+	if (actor_in_predbannik()) then place_to_location(-439.8151,-5.7410,-147.9705)
+	else road_to_pred_mil_trader() end
+end
+
+function place_me_to_marsh_baza()
+	if (actor_in_marsh()) then place_to_location(-205.367,0.888,-291.111)
+	else road_to_marsh_baza() end
+end
+
+function place_me_to_swamp_baza()
+	if (actor_in_swamp()) then place_to_location(193.20,2.70,-27.92)
+	else road_to_swamp_baza() end
+end
+
+function place_me_to_red_forest()
+	if (actor_in_red_forest()) then went_to_red_forest()
+	else road_to_red_forest() end
+end
+
+function place_me_to_lost_village()
+	if (actor_in_lost_village()) then went_to_lost_village()
+	else road_to_lost_village() end
+end
+
+function place_me_to_hospital()
+	if (actor_in_hospital()) then place_to_location(-74.55,19.99,566.81)
+	else road_to_hospital() end
+end
+
+function place_me_to_aver()
+	if (actor_in_aver()) then place_to_location(-404.91,0.55,67.09)
+	else road_to_aver() end
+end
+
+function place_me_to_aver_peshera()
+	if (actor_in_av_peshera()) then place_to_location(-321.73,16.30,104.66)
+	else road_to_av_peshera() end
+end
+
+function place_me_to_hiding_road()
+	if (actor_in_hiding_road()) then place_to_location(84.11,4.85,-265.25)
+	else road_to_hiding_road() end
+end
+
+function place_me_to_kolhoz()
+	if (actor_in_kolhoz()) then place_to_location(13.27,30.01,-103.83)
+	else road_to_kolhoz() end
+end
+
+function place_me_to_dead_city_1()
+	if (actor_in_deadcity()) then place_to_location(117.0543,8.9830,-86.9285)
+	else road_to_dead_city_1() end
+end
+
+function place_me_to_dead_city_2()
+	if (actor_in_deadcity()) then place_to_location(-17.7374,2.0169,-89.1126)
+	else road_to_dead_city_2() end
+end
+
+function place_me_to_limansk_west()
+	if (actor_in_limansk()) then place_to_location(-58.6521,-5.0446,-202.7060)
+	else road_to_limansk_west() end
+end
+
+function place_me_to_promzone()
+	if (actor_in_promzone()) then place_to_location(32.8520,11.2469,-585.7290)
+	else road_to_promzone() end
+end
+
+function place_me_to_generators()
+	if (actor_in_generators()) then place_to_location(-62.1650,32.9639,-534.0401)
+	else road_to_generators() end
+end
+
+function place_me_to_pripyat2()
+	if (actor_in_pripyat2()) then place_to_location(134.0,28.92,238.0)
+	else road_to_pripyat2() end
+end
+
+function place_me_to_pripyat2_from_jupiter()
+	if (actor_in_pripyat2()) then place_to_location(147.84,-0.09,-185.14)
+	else road_to_pripyat2_from_jupiter() end
+end
+
+function place_me_to_jupiter()
+	if (actor_in_jupiter()) then place_to_location(331.94, 20.54, -330.93)
+	else road_to_jupiter() end
+end
+
+function place_me_to_jupiter_scient()
+	if (actor_in_jupiter()) then place_to_location(-192.4604,-4.4475,61.0274)
+	else road_to_jupiter_scient() end
+end
+
+function place_me_to_jupiter_janov()
+	if (actor_in_jupiter()) then place_to_location(-57.0894,3.4853,202.2094)
+	else road_to_jupiter_janov() end
+end
+
+function place_me_to_zaton()
+	if (actor_in_zaton()) then place_to_location(431.4067,31.3390,-412.7567)
+	else road_to_zaton() end
+end
+
+function place_me_to_zaton_skadovsk()
+	if (actor_in_zaton()) then place_to_location(116.9431,-3.9360,177.5393)
+	else road_to_zaton_skadovsk() end
+end
