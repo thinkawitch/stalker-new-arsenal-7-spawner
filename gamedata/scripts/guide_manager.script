@@ -1426,6 +1426,10 @@ function actor_in_esc()
 	return (level.name()=="l01_escape")
 end
 
+function actor_in_garbage()
+	return (level.name()=="l02_garbage")
+end
+
 function actor_in_pripyat2()
 	return (level.name()=="pripyat")
 end
@@ -1464,4 +1468,15 @@ end
 function place_me_to_esc_kpp_new()
 	if (actor_in_esc()) then place_to_location(-169.8882,-25.4353,-353.0877)
 	else road_to_esc_kpp_new() end
+end
+
+
+function place_me_to_garbage_angar()
+	if (actor_in_garbage()) then went_to_garbage_angar()
+	else road_to_garbage_angar() end
+end
+
+function place_me_to_garbage_car()
+	if (actor_in_garbage()) then went_to_garbage_car()
+	else road_to_garbage_car() end
 end
